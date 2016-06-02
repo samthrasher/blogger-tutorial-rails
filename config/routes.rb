@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   Blogger::Application.routes.draw do
-    resources :articles
+    resources :articles do
+      resources :comments
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
